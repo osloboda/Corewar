@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="asm"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/osloboda/study/corewar/asm/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/osloboda/study/corewar/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/osloboda/study/corewar/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/osloboda/study/corewar/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/osloboda/study/corewar/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/osloboda/study/corewar/asm/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/osloboda/study/corewar/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/osloboda/study/corewar/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/osloboda/study/corewar/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/osloboda/study/corewar/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/osloboda/study/corewar/asm/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/osloboda/study/corewar/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/osloboda/study/corewar/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/osloboda/study/corewar/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/osloboda/study/corewar/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="asm">
+				<Option output="/Users/osloboda/study/corewar/asm/cmake-build-debug/asm" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/osloboda/study/corewar/asm/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/osloboda/study/corewar/asm/."/>
+					<Add directory="/Users/osloboda/study/corewar/asm/includes"/>
+					<Add directory="/Users/osloboda/study/corewar/asm/libft"/>
+					<Add directory="/Users/osloboda/study/corewar/asm/srcs"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/osloboda/study/corewar/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 asm"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/osloboda/study/corewar/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/osloboda/study/corewar/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/osloboda/study/corewar/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="asm/fast">
+				<Option output="/Users/osloboda/study/corewar/asm/cmake-build-debug/asm" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/osloboda/study/corewar/asm/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/osloboda/study/corewar/asm/."/>
+					<Add directory="/Users/osloboda/study/corewar/asm/includes"/>
+					<Add directory="/Users/osloboda/study/corewar/asm/libft"/>
+					<Add directory="/Users/osloboda/study/corewar/asm/srcs"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/osloboda/study/corewar/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 asm/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/osloboda/study/corewar/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/osloboda/study/corewar/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/osloboda/study/corewar/asm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/osloboda/study/corewar/asm/includes/asm.h">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/createfield.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/cstr.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/fill.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/fitoa.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_atoi.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_bzero.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_fprime.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_isalnum.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_isalpha.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_isascii.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_isdigit.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_isprint.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_itoa.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_lstadd.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_lstdel.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_lstdelone.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_lstiter.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_lstmap.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_lstnew.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_memalloc.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_memccpy.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_memchr.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_memcmp.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_memcpy.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_memdel.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_memmove.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_memset.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_new_strjoin.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_print_bits.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_printf.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_putchar.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_putchar_fd.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_putendl.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_putendl_fd.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_putnbr.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_putnbr_fd.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_putstr.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_putstr_fd.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_rev_wstr.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_reverse_bits.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_search_and_replace.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_strcat.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_strchr.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_strclr.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_strcmp.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_strcpy.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_strdel.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_strdup.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_strequ.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_striter.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_striteri.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_strjoin.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_strlcat.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_strlen.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_strmap.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_strmapi.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_strncat.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_strncmp.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_strncpy.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_strnequ.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_strnew.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_strnstr.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_strrchr.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_strsplit.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_strstr.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_strsub.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_strtrim.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_swap.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_tolower.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/ft_toupper.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/fts.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/get_next_line.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/get_next_line.h">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/libft.h">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/powitoab.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/precision.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/libft/taketype.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/srcs/main.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/osloboda/study/corewar/asm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
