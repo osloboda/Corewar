@@ -72,7 +72,8 @@ void			validity(t_champ *champion)
 		champion->expect = NULL;
 		champion->n++;
 	}
-	if (!champion->name || !champion->comment)
+	if (!champion->name || !champion->comment || !champion->token)
+		(!champion->token) ? error(champion, "no code") :
 		error(champion, "no name/comment");
 	insize_com(champion);
 	checklabe(champion);

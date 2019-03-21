@@ -126,10 +126,10 @@ void			dop_noc(t_champ *champion, char **dest, char *tmp, char *tmp2)
 		if (ft_strchr(line, '"'))
 		{
 			tmp2 = ft_strsub(line, 0, ft_strchr(line, '"') - line);
-			tmp = ft_new_strjoin(tmp, tmp2);
-			*dest = ft_strdup(tmp);
+			*dest = ft_new_strjoin(tmp, tmp2);
 			ft_strdel(&tmp2);
-			ft_strdel(&tmp);
+			ft_strdel(&champion->line);
+			champion->line = line;
 			champion->expect = ft_strchr(line, '"') + 1;
 			break ;
 		}

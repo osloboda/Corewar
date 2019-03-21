@@ -46,40 +46,46 @@ void			lstadd(t_com **alst, t_com *new)
 
 void			dop_error(t_champ *champion)
 {
-	ft_strdel(&champion->token->com_name);
-	ft_strdel(&champion->token->com_arg[0]);
-	ft_strdel(&champion->token->com_arg[1]);
-	ft_strdel(&champion->token->com_arg[2]);
-	free(champion->token->com_arg);
-	free(champion->token);
+	if (champion->labelprev && champion->labelprev->com_name)
+	{
+		ft_strdel(&champion->labelprev->com_name);
+		free(champion->labelprev);
+	}
+	ft_strdel(&champion->comment);
+	ft_strdel(&champion->name);
+	ft_strdel(&champion->line);
+	ft_strdel(&champion->out);
+	free(champion);
+	exit(0);
 }
 
 void			error(t_champ *champion, char *error)
 {
 	t_com		*tmp;
 	t_com		*tt;
+	char		*er;
 
-	ft_printf("Line %i: Syntax error - %s\n", champion->n, error);
-	if (champion->token)
-		while (champion->token)
+	ft_printf("Line %i: Syntax error - %s\n", champion->n,
+		(er = ft_strdup(error))) ? ft_strdel(&er) : 0;
+	while (champion->token)
+	{
+		tmp = champion->token->next;
+		while (champion->token->label)
 		{
-			tmp = champion->token->next;
-			if (champion->token->label)
-				while (champion->token->label)
-				{
-					tt = champion->token->label->next;
-					ft_strdel(&champion->token->label->com_name);
-					free(champion->token->label);
-					champion->token->label = tt;
-				}
-			dop_error(champion);
-			champion->token = tmp;
+			tt = champion->token->label->next;
+			ft_strdel(&champion->token->label->com_name);
+			free(champion->token->label);
+			champion->token->label = tt;
 		}
-	ft_strdel(&champion->name);
-	ft_strdel(&champion->comment);
-	ft_strdel(&champion->line);
-	free(champion);
-	exit(0);
+		ft_strdel(&champion->token->com_name);
+		ft_strdel(&champion->token->com_arg[0]);
+		ft_strdel(&champion->token->com_arg[1]);
+		ft_strdel(&champion->token->com_arg[2]);
+		free(champion->token->com_arg);
+		free(champion->token);
+		champion->token = tmp;
+	}
+	dop_error(champion);
 }
 
 int				checkformat(char *name)
