@@ -16,7 +16,8 @@ void			doop(t_champ *champion, char **dest, int size)
 {
 	while (*champion->expect == '\t' || *champion->expect == ' ')
 		champion->expect++;
-	if (*champion->expect != '\0' && *champion->expect != '#')
+	if (*champion->expect != '\0' && *champion->expect != '#'
+	    && *champion->expect != ';')
 		error(champion, "bad character");
 	if ((int)ft_strlen(*dest) > size)
 		error(champion, "name/comment lenght");

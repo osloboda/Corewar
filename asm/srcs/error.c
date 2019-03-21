@@ -95,7 +95,9 @@ int				checkformat(char *name)
 	tmp = name;
 	while (*tmp == '.' || *tmp == '/')
 		tmp++;
-	tmp = ft_strchr(tmp, '.');
+    tmp = ft_strchr(tmp, '.');
+	while (ft_strchr(tmp + 1, '.'))
+	    tmp = ft_strchr(tmp + 1, '.');
 	if (tmp && *(tmp + 1) == 's' &&
 		*(tmp + 2) == '\0' && *(tmp - 1))
 		return (1);

@@ -61,6 +61,8 @@ char			**checksub(t_champ *champion, int i)
 	}
 	if (ft_strchr(tmp, '#'))
 		tmp = ft_strsub(tmp, 0, ft_strchr(tmp, '#') - tmp);
+	else if (ft_strchr(tmp, ';'))
+		tmp = ft_strsub(tmp, 0, ft_strchr(tmp, ';') - tmp);
 	else
 		tmp = ft_strdup(tmp);
 	mass = ft_strsplit(tmp, ',');
@@ -77,7 +79,7 @@ void			ifreg(char *tmp, t_com *var, t_champ *champion, int args)
 	tmp += ft_strlen(var->com_arg[args]);
 	while (*tmp == '\t' || *tmp == ' ')
 		tmp++;
-	if (*tmp)
+	if (*tmp && *tmp != ';' && *tmp != '#')
 		error(champion, "bag argument");
 }
 

@@ -102,6 +102,13 @@ int				srdop(t_com *com, char *str, t_champ *champ)
 		res += tmp->com_size;
 		tmp = tmp->next;
 	}
+	if ((label = champ->labelprev))
+	    while (label)
+        {
+            if (!ft_strcmp(str, label->com_name))
+                return (res);
+	        label = label->next;
+        }
 	error(champ, "no such label");
 	return (0);
 }

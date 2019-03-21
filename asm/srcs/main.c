@@ -61,12 +61,13 @@ void			validity(t_champ *champion)
 
 	while ((end = get_next_line(champion->fd, &champion->line)))
 	{
-		if (end == 2)
+		if (end == 2 && !*champion->line)
 			error(champion, "unexpected end of input");
 		champion->expect = champion->line;
 		while (*champion->expect == '\t' || *champion->expect == ' ')
 			champion->expect++;
-		if (*champion->expect && *champion->expect != '#')
+		if (*champion->expect && *champion->expect != '#'
+		    && *champion->expect != ';')
 			parse_token(champion, 16);
 		ft_strdel(&champion->line);
 		champion->expect = NULL;

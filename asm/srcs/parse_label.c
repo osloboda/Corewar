@@ -71,7 +71,7 @@ void			parse_com(t_champ *champion, int i)
 		tmp = var->mass[args];
 		while (*tmp == '\t' || *tmp == ' ')
 			tmp++;
-		if (*tmp == 'r' && *(tmp + 1) != 0 && ft_atoi((tmp + 1)) > 0
+		if (*tmp == 'r' && ft_atoi((tmp + 1)) >= 0
 			&& ft_atoi((tmp + 1)) < 17 && OP(i).args[args] & T_REG)
 			ifreg(tmp, var, champion, args);
 		else if (*tmp == DIRECT_CHAR && OP(i).args[args] & T_DIR)
@@ -103,7 +103,7 @@ int				parse_label(t_champ *champion)
 		tmp++;
 		while (*tmp == '\t' || *tmp == ' ')
 			tmp++;
-		if (!*tmp || *tmp == '#')
+		if (!*tmp || *tmp == '#' || *tmp == ';')
 			return (1);
 		champion->expect = tmp;
 	}
