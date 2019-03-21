@@ -12,76 +12,65 @@
 
 #include "libft.h"
 
-int			find(char *str, char c)
+static	int		ft_count_words(const char *str, char c)
 {
-	int		q;
-	int		g;
+	int	word;
+	int	i;
 
-	q = 0;
-	g = 0;
-	while (*str != '\0')
+	i = 0;
+	word = 0;
+	if (!str)
+		return (0);
+	while (str[i])
 	{
-		while (*str != '\0' && *str == c)
-			str++;
-		while (*str != '\0' && *str != c)
-		{
-			str++;
-			g++;
-		}
-		if (g)
-		{
-			q++;
-			g = 0;
-		}
-	}
-	return (q + 1);
-}
-
-static int	count(int n, char *str, char c)
-{
-	while (str[++n] != '\0' && str[n] != c)
-		;
-	return (n);
-}
-
-static void	init_vars(int *i, int *g)
-{
-	*i = 0;
-	*g = -1;
-}
-
-int			count2(char *str, char c, int i)
-{
-	while (str[i] != '\0' && str[i] == c)
+		if (str[i] == c && str[i + 1] != c)
+			word++;
 		i++;
-	return (i);
+	}
+	if (str[0] != '\0')
+		word++;
+	return (word);
 }
 
-char		**ft_strsplit(char const *s, char c)
+static	char	*ft_word(const char *str, char c, int *i)
+{
+	char	*s;
+	int		k;
+
+	if (!(s = (char *)malloc(sizeof(s) * (ft_strlen(str)))))
+		return (NULL);
+	k = 0;
+	while (str[*i] != c && str[*i])
+	{
+		s[k] = str[*i];
+		k++;
+		*i += 1;
+	}
+	s[k] = '\0';
+	while (str[*i] == c && str[*i])
+		*i += 1;
+	return (s);
+}
+
+char			**ft_strsplit(const char *str, char c)
 {
 	int		i;
-	int		g;
-	int		b;
-	char	**buff;
-	int		n;
+	int		j;
+	int		wrd;
+	char	**s;
 
-	if (s == NULL || !(buff = (char**)malloc(find((char*)s,
-						c) * sizeof(char*))))
+	i = 0;
+	j = 0;
+	wrd = ft_count_words(str, c);
+	if (!(s = (char **)malloc(sizeof(s) * (ft_count_words(str, c) + 2))))
 		return (NULL);
-	init_vars(&i, &g);
-	while (s[i])
+	while (str[i] == c && str[i])
+		i++;
+	while (j < wrd && str[i])
 	{
-		b = 0;
-		i = count2((char*)s, c, i);
-		n = i - 1;
-		if (s[i] != c && s[i] != '\0')
-			buff[++g] = (char*)malloc(count(n, (char*)s,
-						c) - i + 1 * sizeof(char));
-		while (s[i] != c && s[i] != '\0')
-			buff[g][b++] = s[i++];
-		if (s[i])
-			buff[g][b] = '\0';
+		s[j] = ft_word(str, c, &i);
+		j++;
 	}
-	buff[++g] = NULL;
-	return (buff);
+	s[j] = NULL;
+	return (s);
 }

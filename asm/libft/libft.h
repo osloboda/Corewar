@@ -38,6 +38,7 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
 typedef struct		s_float
 {
 	long			whole_part;
