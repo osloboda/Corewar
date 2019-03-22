@@ -6,7 +6,7 @@
 /*   By: osloboda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/21 15:20:50 by osloboda          #+#    #+#             */
-/*   Updated: 2019/03/21 15:20:53 by osloboda         ###   ########.fr       */
+/*   Updated: 2019/03/22 12:57:55 by osloboda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void			doop(t_champ *champion, char **dest, int size)
 	while (*champion->expect == '\t' || *champion->expect == ' ')
 		champion->expect++;
 	if (*champion->expect != '\0' && *champion->expect != '#'
-	    && *champion->expect != ';')
+			&& *champion->expect != ';')
 		error(champion, "bad character");
 	if ((int)ft_strlen(*dest) > size)
 		error(champion, "name/comment lenght");

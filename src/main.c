@@ -12,13 +12,29 @@
 
 #include "vm.h"
 
-int		main(int argc, char **argv)
+static void	clean_flags_vizo(void)
+{
+	g_dump = DUMP;
+	g_vflag = 0;
+	g_aflag = 0;
+	g_pflag = 0;
+}
+
+int			main(int argc, char **argv)
 {
 	main_read(argc, argv);
+	if (g_vizo)
+		clean_flags_vizo();
 	if (g_dump == 0)
 		print_map();
-	else
-		buttle();
+	if (g_vizo == 1)
+	{
+		init_ncurses();
+		print_battle_field();
+		print_cursor();
+		print_score_board();
+	}
+	buttle();
 	main_free();
 	return (0);
 }

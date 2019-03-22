@@ -41,7 +41,7 @@ void	cursor_move(t_cursor *cursor, int shift)
 	ft_printf("\n");
 }
 
-void	print_players(void)
+void	print_cur(void)
 {
 	int			i;
 	t_cursor	*cursor;
@@ -53,10 +53,13 @@ void	print_players(void)
 	{
 		cursor = (t_cursor *)list->content;
 		ft_printf(
-				"cursor id - %4d value - %02x, %02x %02x %02x %02x, line - %#06x, cell - %3d,  delay - %d\n",
+				"cursor id - %4d value - %02x, %02x %02x %02x %02x, ",
 			cursor->id, g_arena[cursor->place], g_arena[cursor->place + 1],
 					g_arena[cursor->place + 2], g_arena[cursor->place + 3],
-					g_arena[cursor->place + 4], cursor->place / 32 * 32, cursor->place % 32, cursor->delay);
+					g_arena[cursor->place + 4], cursor->place / 32 * 32,
+					cursor->place % 32);
+		ft_printf("line - %#06x, cell - %3d,  delay - %d\n",
+				cursor->delay, cursor->place % 32, cursor->delay);
 		list = list->next;
 	}
 }

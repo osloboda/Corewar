@@ -15,6 +15,7 @@
 
 # include "libft.h"
 # include "vm_error.h"
+# include "visual.h"
 # include "op.h"
 # include <fcntl.h>
 # include <unistd.h>
@@ -116,8 +117,10 @@ static t_op			g_op_tab[16] =
 	{"xor", 3, {T_REG | T_IND | T_DIR, T_REG | T_IND | T_DIR, T_REG},
 		8, 1, 4, make_xor, 1, 0},
 	{"zjmp", 1, {T_DIR}, 9, 0, 2, make_zjmp, 0, 1},
-	{"ldi", 3, {T_REG | T_DIR | T_IND, T_DIR | T_REG, T_REG}, 10, 1, 2, make_ldi, 1, 1},
-	{"sti", 3, {T_REG, T_REG | T_DIR | T_IND, T_DIR | T_REG}, 11, 1, 2, make_sti, 1, 1},
+	{"ldi", 3, {T_REG | T_DIR | T_IND, T_DIR | T_REG, T_REG}, 10, 1, 2,
+		make_ldi, 1, 1},
+	{"sti", 3, {T_REG, T_REG | T_DIR | T_IND, T_DIR | T_REG}, 11, 1, 2,
+		make_sti, 1, 1},
 	{"fork", 1, {T_DIR}, 12, 0, 2, make_fork, 0, 1},
 	{"lld", 2, {T_DIR | T_IND, T_REG}, 13, 1, 4, make_lld, 1, 0},
 	{"lldi", 3, {T_REG | T_DIR | T_IND, T_DIR | T_REG, T_REG},
@@ -167,7 +170,7 @@ void				write_fun(t_cursor *cursor, int val, int ind);
 void				write_val(t_cursor *cursor, int *shift, int val, int mask);
 
 void				buttle(void);
-void				print_players(void);
+void				print_cur(void);
 void				print_map(void);
 void				print_v(t_cursor *cursor, int val, int reg, t_uchar mask);
 void				cursor_move(t_cursor *cursor, int shift);

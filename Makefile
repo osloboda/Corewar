@@ -25,7 +25,8 @@ SRC_DIR = 		src/
 OBJ_DIR = 		obj/
 
 SRC = 			error.c init.c read_bytecode.c read_file.c main.c battle.c print.c free.c \
-				ops.c oops.c ooops.c aff.c ops_fun.c
+				ops.c oops.c ooops.c aff.c ops_fun.c \
+				vizo_init.c vizo_tools.c vizo_print_1.c vizo_print_2.c
 
 OBJ = 			$(addprefix $(OBJ_DIR), $(SRC:.c=.o))
 
@@ -41,7 +42,7 @@ $(ASM):
 	@$(MAKE) -C asm_dir
 
 $(NAME): 		$(LIBC) $(ASM) $(OBJ)
-	@$(CC)  -o $(NAME) $(OBJ) -L$(LIB_DIR) -lft
+	@$(CC)  -o $(NAME) $(OBJ) -l ncurses -L$(LIB_DIR) -lft
 	@echo "\033[34mCorewar compiled!\033[0m"
 
 $(OBJ):			| $(OBJ_DIR)

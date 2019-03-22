@@ -25,6 +25,7 @@ $(OBJ):		| $(OBJ_DIR)
 
 $(OBJ_DIR):
 	@mkdir $(OBJ_DIR)
+	@echo "\033[32mCompiling library...\033[0m"
 
 $(OBJ_DIR)%.o: %.c *.h
 	@$(CC) -c $< -o $@

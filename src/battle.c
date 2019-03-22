@@ -71,11 +71,8 @@ static t_list	*kill_cursors(void)
 	return (new_list);
 }
 
-void			one_check(void)
+static void		one_check(int rounds)
 {
-	int		rounds;
-
-	rounds = -1;
 	g_live_per_cycle = 0;
 	while (++rounds < ((g_cycle_to_die > 0) ? g_cycle_to_die : 1)
 			&& (g_dump == DUMP || g_current_cyrcle < g_dump))
@@ -84,6 +81,8 @@ void			one_check(void)
 		if (g_vflag & 0x02)
 			ft_printf("It is now cycle %d\n", g_current_cyrcle);
 		ft_lstiter(g_all_cursor, run_one_cursor);
+		if (g_vizo)
+			draw();
 	}
 	g_all_cursor = kill_cursors();
 	if (g_current_cyrcle == g_dump)
@@ -104,7 +103,9 @@ void			buttle(void)
 {
 	while (ft_lstlen(g_all_cursor) > 0 &&
 			(g_dump == DUMP || g_current_cyrcle < g_dump))
-		one_check();
+		one_check(-1);
+	if (g_vizo == 1)
+		end_vizo();
 	if (ft_lstlen(g_all_cursor) == 0 && g_last_player != NULL)
 		ft_printf("Contestant %d, \"%s\", has won !\n",
 		g_last_player->header->magic, g_last_player->header->prog_name);
@@ -113,6 +114,6 @@ void			buttle(void)
 		if (g_current_cyrcle == g_dump)
 			print_map();
 		if (g_pflag && g_current_cyrcle == g_dump)
-			print_players();	
-	}	
+			print_cur();
+	}
 }

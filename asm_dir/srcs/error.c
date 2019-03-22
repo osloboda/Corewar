@@ -6,7 +6,7 @@
 /*   By: osloboda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/21 15:24:07 by osloboda          #+#    #+#             */
-/*   Updated: 2019/03/21 15:24:20 by osloboda         ###   ########.fr       */
+/*   Updated: 2019/03/22 12:57:31 by osloboda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,9 +95,9 @@ int				checkformat(char *name)
 	tmp = name;
 	while (*tmp == '.' || *tmp == '/')
 		tmp++;
-    tmp = ft_strchr(tmp, '.');
+	tmp = ft_strchr(tmp, '.');
 	while (ft_strchr(tmp + 1, '.'))
-	    tmp = ft_strchr(tmp + 1, '.');
+		tmp = ft_strchr(tmp + 1, '.');
 	if (tmp && *(tmp + 1) == 's' &&
 		*(tmp + 2) == '\0' && *(tmp - 1))
 		return (1);

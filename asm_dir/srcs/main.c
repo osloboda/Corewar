@@ -6,7 +6,7 @@
 /*   By: osloboda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/14 18:59:12 by osloboda          #+#    #+#             */
-/*   Updated: 2019/03/14 20:03:20 by osloboda         ###   ########.fr       */
+/*   Updated: 2019/03/22 12:56:49 by osloboda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void			validity(t_champ *champion)
 		while (*champion->expect == '\t' || *champion->expect == ' ')
 			champion->expect++;
 		if (*champion->expect && *champion->expect != '#'
-		    && *champion->expect != ';')
+				&& *champion->expect != ';')
 			parse_token(champion, 16);
 		ft_strdel(&champion->line);
 		champion->expect = NULL;

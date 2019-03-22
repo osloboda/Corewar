@@ -125,18 +125,6 @@ void			write_val(t_cursor *cursor, int *shift, int val, int mask)
 	{
 		ind = xtoi_bytecode(((cursor->place + *shift) % MEM_SIZE), IND_SIZE);
 		write_fun(cursor, val, ind);
-/*		W_ARENA(cursor->place, ind) = val >> 24;
-		W_ARENA(cursor->place + 1, ind) = val >> 16;
-		W_ARENA(cursor->place + 2, ind) = val >> 8;
-		W_ARENA(cursor->place + 3, ind) = val;
-		W_COLOR(cursor->place, ind) = cursor->owner;
-		W_COLOR(cursor->place + 1, ind) = cursor->owner;
-		W_COLOR(cursor->place + 2, ind) = cursor->owner;
-		W_COLOR(cursor->place + 3, ind) = cursor->owner;
-//		W_TIME(cursor->place, ind) = 50;
-//		W_TIME(cursor->place, ind) = 50;
-//		W_TIME(cursor->place, ind) = 50;
-//		W_TIME(cursor->place, ind) = 50; */
 		*shift += IND_SIZE;
 		print_v(cursor, ind, 0, mask);
 	}

@@ -6,7 +6,7 @@
 /*   By: osloboda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/21 15:16:39 by osloboda          #+#    #+#             */
-/*   Updated: 2019/03/21 15:17:01 by osloboda         ###   ########.fr       */
+/*   Updated: 2019/03/22 13:00:29 by osloboda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,13 +82,11 @@ void			insize_com(t_champ *champion)
 	}
 }
 
-int				srdop(t_com *com, char *str, t_champ *champ)
+int				srdop(t_com *com, char *str, t_champ *champ, int res)
 {
 	t_com		*tmp;
 	t_com		*label;
-	int			res;
 
-	res = 0;
 	tmp = com;
 	while (tmp)
 	{
@@ -103,12 +101,12 @@ int				srdop(t_com *com, char *str, t_champ *champ)
 		tmp = tmp->next;
 	}
 	if ((label = champ->labelprev))
-	    while (label)
-        {
-            if (!ft_strcmp(str, label->com_name))
-                return (res);
-	        label = label->next;
-        }
+		while (label)
+		{
+			if (!ft_strcmp(str, label->com_name))
+				return (res);
+			label = label->next;
+		}
 	error(champ, "no such label");
 	return (0);
 }
@@ -134,5 +132,5 @@ int				search_label(t_com *com, char *str, t_champ *champ)
 		if (tmp)
 			res -= tmp->com_size;
 	}
-	return (srdop(com, str, champ));
+	return (srdop(com, str, champ, 0));
 }

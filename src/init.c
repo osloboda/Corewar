@@ -50,7 +50,7 @@ t_cursor	*init_cursor(t_uint place, int whom)
 	new_cursor->op = 0;
 	new_cursor->delay = 0;
 	new_cursor->carry = 0;
-	new_cursor->owner = whom;
+	new_cursor->owner = whom + 1;
 	new_cursor->place = (MEM_SIZE + place) % MEM_SIZE;
 	i = 0;
 	new_cursor->reg[i] = -whom - 1;

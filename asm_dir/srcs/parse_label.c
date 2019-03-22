@@ -6,7 +6,7 @@
 /*   By: osloboda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/21 15:22:10 by osloboda          #+#    #+#             */
-/*   Updated: 2019/03/21 15:22:16 by osloboda         ###   ########.fr       */
+/*   Updated: 2019/03/22 12:55:43 by osloboda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void			parse_com(t_champ *champion, int i)
 		while (*tmp == '\t' || *tmp == ' ')
 			tmp++;
 		if (*tmp == 'r' && ft_atoi((tmp + 1)) >= 0
-			&& ft_atoi((tmp + 1)) < 17 && OP(i).args[args] & T_REG)
+			&& ft_atoi((tmp + 1)) <= 99 && OP(i).args[args] & T_REG)
 			ifreg(tmp, var, champion, args);
 		else if (*tmp == DIRECT_CHAR && OP(i).args[args] & T_DIR)
 			ifdir(tmp, var, champion, args);
